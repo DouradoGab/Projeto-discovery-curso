@@ -7,18 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devlinks</title>
-    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
 <div id="container">
     <div id="profile">
-        <img 
-        src="./assets/avatar.png" 
-        alt="Foto de Mayk Brito de óculos e camisa preta, sorrindo, fundo amarelo."
-        />
-
-        <p>@maykbrito</p>
+        <!-- A imagem agora tem um ID para ser manipulada pelo JavaScript -->
+        <img id="profile-image" src="./assets/avatar.png" alt="Foto de uma familia olhando o horizonte." />
+        <p>@Familiabadarosca</p>
     </div>
 
     <div id="switch">
@@ -26,32 +23,28 @@
     </div>
 
     <ul>
-        <li>
-            <a href="#">Inscreva-se no NLW</a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/lullydean/">Confira meu Instagram</a>
-        </li>
-        <li>
-            <a href="#">Veja meu portfolio</a>
-        </li>
-        <li>
-            <a href="#">Conheça o Explorer</a>
-        </li>
+        <li><a href="https://www.instagram.com/cinthya_souzaaa/">Veja a mamãe do Dev</a></li>
+        <li><a href="https://www.instagram.com/lullydean/">Conheça a noiva do Dev</a></li>
+        <li><a href="https://www.instagram.com/guiiii_douradoo/">Observe o irmão do Dev</a></li>
+        <li><a href="https://www.instagram.com/laah.moura/">Conheça a cunhada do Dev</a></li>
+        <li><a href="https://www.instagram.com/viih._dourado/">Admire a irmã do Dev</a></li>
     </ul>
 
     <div id="social-links">
-        <a href="https://github.com/yourusername" target="_blank">
-            <ion-icon name="logo-github"></ion-icon>
+        <a href="https://www.instagram.com/cinthya_souzaaa/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
         </a>
         <a href="https://www.instagram.com/lullydean/" target="_blank">
             <ion-icon name="logo-instagram"></ion-icon>
         </a>
-        <a href="https://youtube.com/c/yourchannel" target="_blank">
-            <ion-icon name="logo-youtube"></ion-icon>
+        <a href="https://www.instagram.com/guiiii_douradoo/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank">
-            <ion-icon name="logo-linkedin"></ion-icon>
+        <a href="https://www.instagram.com/laah.moura/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/viih._dourado/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
         </a>
     </div>
 
@@ -64,23 +57,38 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <script>
-    // Função para alternar entre os modos Light e Dark
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const body = document.body;
+// Função para alternar entre os modos Light e Dark
+const themeToggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+const profileImage = document.getElementById('profile-image'); // Acessando a imagem do perfil
 
-    themeToggleButton.addEventListener('click', () => {
-        // Alternar a classe 'light' no body
-        body.classList.toggle('light');
-        
-        // Atualizando o ícone do tema com base na classe
-        if (body.classList.contains('light')) {
-            themeToggleButton.style.transform = 'translateX(32px)'; // Move o botão para a direita
-            themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)';
-        } else {
-            themeToggleButton.style.transform = 'translateX(0)'; // Move o botão para a esquerda
-            themeToggleButton.style.backgroundImage = 'url(assets/moon-stars.svg)';
-        }
-    });
+// Recuperar a preferência de tema do localStorage
+if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light');
+    themeToggleButton.style.transform = 'translateX(32px)';
+    themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)';
+    // Alterar a foto para o modo claro
+    profileImage.src = './assets/avatar-light.png';
+}
+
+themeToggleButton.addEventListener('click', () => {
+    body.classList.toggle('light');
+    
+    // Alterando a foto do perfil conforme o tema
+    if (body.classList.contains('light')) {
+        themeToggleButton.style.transform = 'translateX(32px)';
+        themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)';
+        localStorage.setItem('theme', 'light');
+        // Foto no modo claro
+        profileImage.src = './assets/avatar-light.png';
+    } else {
+        themeToggleButton.style.transform = 'translateX(0)';
+        themeToggleButton.style.backgroundImage = 'url(assets/moon-stars.svg)';
+        localStorage.setItem('theme', 'dark');
+        // Foto no modo escuro
+        profileImage.src = './assets/avatar.png';
+    }
+});
 </script>
 </body>
 </html>

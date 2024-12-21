@@ -1,8 +1,8 @@
-<h1 align="center"> DevLinks </h1>
+<h1 align="center"> Instas dos Badaroscas </h1>
 
 <p align="center">
-Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB. <br/>
-<a href="https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito">Estude esse projeto em formato de vídeo clicando aqui.</a>
+Links dos instagram dos membros da família Badarosca <br/>
+<a href="https://www.instagram.com/douradobual/">Conheça o Dev clicando aqui</a>
 </p>
 
 <p align="center">
@@ -33,15 +33,16 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O DevLinks é um agregador de links para usar como cartão de visitas online.
+Se trata de um DevLinks que nada mais é que um agregador de links para usar como cartão de visitas online.
+Projeto feito para o Discovery da Rocket
 
-- [Acesse o projeto finalizado, online](https://maykbrito.github.io/devlinks)
+- [Acesse o projeto finalizado, online](https://douradogab.github.io/Projeto-discovery-curso/)
 
-- [Assistir aulas](https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito)
+- [Assistir aulas que inspiraram o projeto](https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito)
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+Você pode visualizar o layout que inspirou o projeto através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 
@@ -49,4 +50,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ by G.Dourado :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Feito com ♥ by G.Dourado :wave: [Conheça meu instagram](https://www.instagram.com/douradobual/)
