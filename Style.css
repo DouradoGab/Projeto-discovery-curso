@@ -70,41 +70,54 @@ body {
 
 /* Switch (botão de tema) */
 #switch {
-    margin: 24px auto;
-    width: 64px;
+    margin: 24px auto; /* Espaçamento entre o perfil e os links */
+    width: 64px; /* Definindo largura fixa do switch */
     height: 32px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Inicia com o botão à esquerda */
     align-items: center;
     border-radius: 9999px;
     background: var(--surface-color);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
     position: relative;
-    transition: background 0.3s;
+    overflow: hidden; /* Garante que o botão não saia da borda */
+    transition: background 0.3s ease;
 }
 
+/* Estilo do botão dentro do switch */
 #theme-toggle {
-    width: 32px;
-    height: 32px;
+    width: 28px; /* Ajuste o tamanho do botão */
+    height: 28px;
     background: white no-repeat center;
     border: 0;
-    border-radius: 50%;
+    border-radius: 50%; /* Forma arredondada */
     cursor: pointer;
-    background-size: 20px;
+    background-size: 20px; /* Ajuste o ícone do botão */
     background-position: center;
     background-repeat: no-repeat;
+    position: absolute; /* Tornar o botão posicionado absolutamente */
     transition: transform 0.3s ease, background-image 0.3s ease;
 }
 
-/* Modo Light (com o ícone de sun) */
+/* Modo Light (com o ícone de sol) */
 .light #theme-toggle {
-    transform: translateX(32px);
-    background-image: url(assets/sun.svg);
+    transform: translateX(32px); /* Movendo o botão para a direita */
+    background-image: url(assets/sun.svg); /* Ícone de sol */
 }
 
-/* Modo Dark (com o ícone de moon) */
+/* Modo Dark (com o ícone de lua) */
 #theme-toggle {
-    background-image: url(assets/moon-stars.svg);
+    background-image: url(assets/moon-stars.svg); /* Ícone de lua */
+}
+
+/* Estilo para o botão de switch quando está no modo escuro */
+body:not(.light) #switch {
+    background: var(--surface-color); /* Cor de fundo no modo escuro */
+}
+
+/* Modo Light (quando está no modo claro) */
+body.light #switch {
+    background: var(--highlight-color); /* Cor de fundo no modo claro */
 }
 
 /* Estilo dos links principais */
@@ -154,7 +167,6 @@ ul li:hover {
 }
 
 /*media queries*/
-
 @media (min-width: 700px) {
     :root {
         --bg-url: url(./assets/bg-desktop.jpg);
@@ -164,3 +176,4 @@ ul li:hover {
         --bg-url: url(./assets/bg-desktop-light.jpg);
     }
 }
+
