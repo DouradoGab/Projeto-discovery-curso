@@ -71,8 +71,8 @@
     themeToggleButton.addEventListener('click', () => {
         // Alternar a classe 'light' no body
         body.classList.toggle('light');
-
-        // Alternar o ícone do botão dependendo do modo
+        
+        // Atualizando o ícone do tema com base na classe
         if (body.classList.contains('light')) {
             themeToggleButton.style.transform = 'translateX(32px)'; // Move o botão para a direita
             themeToggleButton.style.backgroundImage = 'url(assets/sun.svg)';
